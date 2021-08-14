@@ -99,6 +99,25 @@ Preview logs from the local script
 
 ![image](https://user-images.githubusercontent.com/4667129/129120654-d88f6ea1-b411-46a6-89ac-722691b53162.png)
 
+### Swagger Documentation
+
+Swagger.json URL for the endpoint is available to download
+
+![image](https://user-images.githubusercontent.com/4667129/129433043-2e63be75-cb0e-493b-8706-4c9ff099183f.png)
+
+
+Run localhost serving the edownloaded swagger.json that allows CORS for Swagger UI to access
+
+![image](https://user-images.githubusercontent.com/4667129/129433035-1727ea70-70ca-4dd8-b765-20f84d3f8fec.png)
+
+Run Swagger UI
+
+![image](https://user-images.githubusercontent.com/4667129/129433076-f5ab8dbf-f4cd-4c19-9671-653e46a7d63a.png)
+
+Access API documentation from the local swagger.json
+
+![image](https://user-images.githubusercontent.com/4667129/129433082-52e36b54-b028-4dc3-a038-76a78ffdcbc4.png)
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
