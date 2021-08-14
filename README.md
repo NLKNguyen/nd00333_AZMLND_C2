@@ -118,6 +118,17 @@ Access API documentation from the local swagger.json
 
 ![image](https://user-images.githubusercontent.com/4667129/129433082-52e36b54-b028-4dc3-a038-76a78ffdcbc4.png)
 
+### Consume Endpoint
+
+Set up endpoint test script with URI with authentication key and sample test data
+
+![image](https://user-images.githubusercontent.com/4667129/129434783-82c120b4-c872-4da2-869b-6542fb408c2f.png)
+
+Test the endpoint
+
+![image](https://user-images.githubusercontent.com/4667129/129434801-843586c9-f5fe-463e-b03a-83db5a26c16e.png)
+
+
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
