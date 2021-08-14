@@ -39,7 +39,14 @@ Get object Id
 
 ![image](https://user-images.githubusercontent.com/4667129/129120152-becff75c-6cd2-45d1-9092-403d3acb2c79.png)
 
-### Set up Python SDK for Azure in local environment
+
+### Deploy the best model
+
+![image](https://user-images.githubusercontent.com/4667129/129460832-621b4167-aa5c-4bf1-ba47-3a6eeed382eb.png)
+
+### Interact with the deployed model using Python
+
+#### Set up Python SDK for Azure in local environment
 
 Make virtual environment in the project directory
 
@@ -89,7 +96,7 @@ Name: PyJWT
 Version: 1.7.1
 ```
 
-### Enabled Application Insights using Python script
+#### Enabled Application Insights using Python script
 
 ![image](https://user-images.githubusercontent.com/4667129/129120622-c2e842be-4559-48c3-895e-421e0e03e62b.png)
 
@@ -99,7 +106,7 @@ Preview logs from the local script
 
 ![image](https://user-images.githubusercontent.com/4667129/129120654-d88f6ea1-b411-46a6-89ac-722691b53162.png)
 
-### Swagger Documentation
+#### Swagger Documentation
 
 Swagger.json URL for the endpoint is available to download
 
@@ -118,7 +125,7 @@ Access API documentation from the local swagger.json
 
 ![image](https://user-images.githubusercontent.com/4667129/129433082-52e36b54-b028-4dc3-a038-76a78ffdcbc4.png)
 
-### Consume Endpoint
+#### Consume Endpoint
 
 Set up endpoint test script with URI with authentication key and sample test data
 
