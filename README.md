@@ -175,3 +175,8 @@ The scheduled run also shows in ML Studio.
 
 Video: https://youtu.be/M8rDx_4pgHk
 
+# Standout Suggestions
+
+As explained in the video, since the labels in the provided dataset are highly imbalanced (89% "No" vs 11% "Yes"), this can lead to a falsely perceived positive effect of a model's accuracy because the input data has bias towards one class. Improving this will surely be beneficial. One way is to find more data of the smaller class, or using synthetic data generation technique is also useful.
+
+Furthermore, increasing experiment timeout and number of cross validation for AutoML would also improve the performance.
