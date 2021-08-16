@@ -16,7 +16,7 @@ This is an architecture overview of the workflow and the scope of this project.
 
 ![image](https://user-images.githubusercontent.com/4667129/129495120-9cd5f844-91c9-419d-b6ef-cc59846ec515.png)
 
-The project includes registering dataset to use with Automated ML to determine the best model for production deployment as a REST API endpoint which will then be consumed by a REST client and also be managed by Python SDK for monitoring. Finally, a pipeline will be setup so that it can be trigger to execute whenever needed in the future.
+The project includes registering dataset to use with Automated ML to determine the best model for production deployment as a REST API endpoint which will then be consumed by a REST client and also be managed by Python SDK for monitoring. Finally, a pipeline will be set up so that it can be triggered to execute whenever needed in the future.
 
 # Key Steps
  
@@ -172,5 +172,6 @@ The scheduled run also shows in ML Studio.
 
 
 # Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+
+Video: https://youtu.be/M8rDx_4pgHk
 
