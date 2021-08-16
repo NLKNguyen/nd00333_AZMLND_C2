@@ -1,22 +1,26 @@
-# nd00333_AZMLND_C2
+Operationalizing Machine Learning with Azure
+======
 
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
+# Overview
 
+This project demonstrates the use of Azure ML to operationalize an end-to-end machine learning pipeline from model training to API consuming in production with sufficient monitoring. 
 
-# Your Project Title Here
+The dataset we use is a marketing campaign that records people who contacted/answered the calls, and we seek to predict a yes/no answer to whether a person is a potential lead in this campaign.
 
-*TODO:* Write an overview to your project.
+Dataset URL: https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
+
 
 ## Architectural Diagram
-*TODO*: Provide an architectual diagram of the project and give an introduction of each step. An architectural diagram is an image that helps visualize the flow of operations from start to finish. In this case, it has to be related to the completed project, with its various stages that are critical to the overall flow. For example, one stage for managing models could be "using Automated ML to determine the best model". 
+
+This is an architecture overview of the workflow and the scope of this project.
 
 ![image](https://user-images.githubusercontent.com/4667129/129495120-9cd5f844-91c9-419d-b6ef-cc59846ec515.png)
 
+The project includes registering dataset to use with Automated ML to determine the best model for production deployment as a REST API endpoint which will then be consumed by a REST client and also be managed by Python SDK for monitoring. Finally, a pipeline will be setup so that it can be trigger to execute whenever needed in the future.
 
-
-## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
-
+# Key Steps
+ 
+## Resource Provision
 ### Create Azure Service Principle
 
 ![image](https://user-images.githubusercontent.com/4667129/129117771-8e9fdf44-a2f8-434c-bff8-a5d10ef8bb25.png)
@@ -29,6 +33,8 @@ Get object Id
 ### Share workspace to the newly created account
 ![image](https://user-images.githubusercontent.com/4667129/129118415-ba4bc243-2efe-4beb-bcb9-a14adca4bd9f.png)
 
+
+## Model Training
 ### Upload dataset and register
 
 ![image](https://user-images.githubusercontent.com/4667129/129119881-c0cf253e-b0a5-42e2-92a8-20a5c7879e5a.png)
@@ -43,6 +49,8 @@ Get object Id
 
 ![image](https://user-images.githubusercontent.com/4667129/129120152-becff75c-6cd2-45d1-9092-403d3acb2c79.png)
 
+
+## Model Deployment
 
 ### Deploy the best model
 
@@ -140,7 +148,7 @@ Test the endpoint
 ![image](https://user-images.githubusercontent.com/4667129/129434801-843586c9-f5fe-463e-b03a-83db5a26c16e.png)
 
 
-### Pipeline
+## Pipeline
 
 Using Python SDK in Jupyter Notebook to create a ML pipeline
 
@@ -163,8 +171,6 @@ The scheduled run also shows in ML Studio.
 ![image](https://user-images.githubusercontent.com/4667129/129460183-f73fd810-80e7-4440-872b-c8c3ad302115.png)
 
 
-## Screen Recording
+# Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
