@@ -28,7 +28,7 @@ The project includes registering dataset to use with Automated ML to determine t
 
 # Key Steps
  
-## Resource Provision
+## Step 0: Resource Provision
 ### Create Azure Service Principle
 
 ![image](https://user-images.githubusercontent.com/4667129/129117771-8e9fdf44-a2f8-434c-bff8-a5d10ef8bb25.png)
@@ -42,7 +42,7 @@ Get object Id
 ![image](https://user-images.githubusercontent.com/4667129/129118415-ba4bc243-2efe-4beb-bcb9-a14adca4bd9f.png)
 
 
-## Model Training
+## Step 1: Model Training
 ### Upload dataset and register
 
 ![image](https://user-images.githubusercontent.com/4667129/129119881-c0cf253e-b0a5-42e2-92a8-20a5c7879e5a.png)
@@ -58,15 +58,18 @@ Get object Id
 ![image](https://user-images.githubusercontent.com/4667129/129120152-becff75c-6cd2-45d1-9092-403d3acb2c79.png)
 
 
-## Model Deployment
+## Step 2: Model Deployment
 
 ### Deploy the best model
 
 ![image](https://user-images.githubusercontent.com/4667129/129460832-621b4167-aa5c-4bf1-ba47-3a6eeed382eb.png)
 
-### Interact with the deployed model using Python
 
-#### Set up Python SDK for Azure in local environment
+## Step 3: Enabled Application Insights
+
+Once the model is deployed, enable Application Insights to collect the service logs and useful metrics for monitoring purposes.
+
+### Set up Python SDK for Azure in local environment
 
 Make virtual environment in the project directory
 
@@ -116,7 +119,7 @@ Name: PyJWT
 Version: 1.7.1
 ```
 
-#### Enabled Application Insights using Python script
+### Enabled Application Insights using Python script
 
 ![image](https://user-images.githubusercontent.com/4667129/129120622-c2e842be-4559-48c3-895e-421e0e03e62b.png)
 
@@ -126,7 +129,7 @@ Preview logs from the local script
 
 ![image](https://user-images.githubusercontent.com/4667129/129120654-d88f6ea1-b411-46a6-89ac-722691b53162.png)
 
-#### Swagger Documentation
+## Step 4: View Swagger Documentation
 
 Swagger.json URL for the endpoint is available to download
 
@@ -145,7 +148,7 @@ Access API documentation from the local swagger.json
 
 ![image](https://user-images.githubusercontent.com/4667129/129433082-52e36b54-b028-4dc3-a038-76a78ffdcbc4.png)
 
-#### Consume Endpoint
+## Step 5: Consume Endpoint
 
 Set up endpoint test script with URI with authentication key and sample test data
 
@@ -156,7 +159,7 @@ Test the endpoint
 ![image](https://user-images.githubusercontent.com/4667129/129434801-843586c9-f5fe-463e-b03a-83db5a26c16e.png)
 
 
-## Pipeline
+## Step 6: Pipeline Automation
 
 Using Python SDK in Jupyter Notebook to create a ML pipeline
 
@@ -182,3 +185,14 @@ The scheduled run also shows in ML Studio.
 # Screen Recording
 
 Video: https://youtu.be/M8rDx_4pgHk
+
+# Future Work
+
+Some improvements for future consideration
+
++ **Feature engineering**: as explained in the video, since the labels in the provided dataset are highly imbalanced (89% "No" vs 11% "Yes"), this can lead to a falsely perceived positive effect of a model's accuracy because the input data has bias towards one class. Improving this will surely be beneficial. One way is to find more data of the smaller class, or using synthetic data generation technique is also useful. 
+
++ **Training optimization**: increasing experiment timeout and number of cross validation for AutoML can help find better performance model.
+
++ **Service monitoring**: using benchmark tools such as Apache Benchmark to examine the service throughput in current compute target to see if it meets the performance target or needs to have more computation resource. Also, having the benchmark information we can estimate the acceptable time per request then set up alerts in Application Insights to detect early sign of performance degrading to proactively plan for higher compute resource. 
+
