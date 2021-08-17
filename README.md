@@ -9,11 +9,11 @@ The dataset we use is a marketing campaign that records people who contacted/ans
 
 Dataset URL: https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv
 
-First, we use Azure ML Studio interface to register the dataset then create an Automated ML experiment for traing classification models. 
+First, we use Azure ML Studio interface to register the dataset then create an Automated ML experiment for training classification models.
 
 Second, we deploy the best performance model as a prediction web service as a REST API endpoint. We have Application Insights enabled for collecting logs and Swagger specification available for viewing the API documentation. The web service API can be consumed by any standard HTTP client, and we will be using a Python script as an example.
 
-Third, we set up a Pipeline using Azure ML Python SDK in Jupyter Notebook to facilitate a similar worklfow like we have just done previously using web interface, but now it's done programmatically. Therefore, more automation capabilities are available, for example, automaticallly rerun the Pipeline for model retrain whenever there is dataset update or code change. This Pipeline can be integrated nicely to an existing CI/CD (e.g. Azure DevOps) that allows automatic model training and deployment. We can also pick and choose any model that looks better than the previous to deploy a new prediction service endpoint.
+Third, we set up a Pipeline using Azure ML Python SDK in Jupyter Notebook to facilitate a similar workflow as we have just done previously using the web interface, but now it's done programmatically. Therefore, more automation capabilities are available, for example, automatically rerun the Pipeline for model retrain whenever there is dataset update or code change. This Pipeline can be integrated nicely into an existing CI/CD (e.g. Azure DevOps) that allows automatic model training and deployment. We can also pick and choose any model that looks better than the previous to deploy a new prediction service endpoint.
 
 Finally, we publish the Pipeline endpoint that is also a REST API but for Pipeline execution. We use Jupyter Notebook to demonstrate a Pipeline trigger to make a new experiment.
 
